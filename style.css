@@ -386,3 +386,23 @@ footer img {
 footer strong {
     display: block;
     color: var(--
+.social-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 !important;
+}
+
+.social-icon {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #c9a24d;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0c579;
+    font-size: 18px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
