@@ -104,17 +104,18 @@ img {
 
 /* ANA GİRİŞ */
 
-.hero {
-    min-height: 720px;
-    position: relative;
-    display: flex;
-    align-items: center;
+.hero{
     background:
         linear-gradient(
-            rgba(22,58,99,.72),
-            rgba(22,58,99,.55)
+            90deg,
+            rgba(250,247,242,.92) 0%,
+            rgba(250,247,242,.70) 38%,
+            rgba(250,247,242,.10) 65%,
+            rgba(250,247,242,0) 100%
         ),
-        url("hero-bg.jpg") center center / cover no-repeat;
+        url("images/hero.jpg") center center/cover no-repeat;
+
+    min-height: 100vh;
 }
 
 .hero-overlay{
