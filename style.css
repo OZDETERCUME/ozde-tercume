@@ -104,35 +104,84 @@ img {
 
 /* ANA GİRİŞ */
 
-.hero{
-    background:
-        linear-gradient(
-            90deg,
-            rgba(250,247,242,.92) 0%,
-            rgba(250,247,242,.70) 38%,
-            rgba(250,247,242,.10) 65%,
-            rgba(250,247,242,0) 100%
-        ),
-        url("images/hero.jpg") center center/cover no-repeat;
+/* =========================
+   HERO
+========================= */
 
-    min-height: 100vh;
+.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 88vh;
+    padding: 120px 8% 80px;
+    overflow: hidden;
+
+background:
+linear-gradient(
+90deg,
+rgba(248,245,239,.96) 0%,
+rgba(248,245,239,.90) 35%,
+rgba(248,245,239,.55) 55%,
+rgba(248,245,239,.15) 70%,
+rgba(248,245,239,0) 100%
+),
+url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
 .hero-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to right,
-        rgba(255,255,255,.08),
-        rgba(255,255,255,0)
-    );
+    display:none;
 }
+
 .hero-content{
     position:relative;
     z-index:2;
-    max-width:650px;
-    margin-left:8%;
+    max-width:600px;
+    color:#3d3129;
+}
+
+.hero-content h1{
+    font-size:clamp(42px,5vw,62px);
+    line-height:1.08;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#2f2924;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#65584c;
+    margin-bottom:35px;
+    max-width:520px;
+}
+
+.hero .btn,
+.hero .primary-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:16px 36px;
+
+    background:#c89a63;
     color:#fff;
+
+    border-radius:50px;
+
+    text-decoration:none;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.hero .btn:hover,
+.hero .primary-button:hover{
+    background:#b78650;
+    transform:translateY(-3px);
 }
 
 .since {
