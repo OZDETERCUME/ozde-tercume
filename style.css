@@ -647,3 +647,34 @@ footer small {
 }
 
 }
+/* Yukarı Çık Butonu */
+
+#topButton {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #c9a24d;
+    color: #071a33;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s;
+    z-index: 9999;
+}
+
+#topButton.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#topButton:hover {
+    transform: translateY(-5px);
+    background: #e0c579;
+}
