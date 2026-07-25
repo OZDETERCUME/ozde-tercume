@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f3ee;
+    color: #3b2415;
+}
+
+header {
+    background: #ffffff;
+    padding: 18px 7%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6b4324;
+}
+
+nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+nav a {
+    color: #3b2415;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#anasayfa {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #3b2415, #8a6548);
+    color: white;
+}
+
+#anasayfa h1 {
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+#anasayfa p {
+    font-size: 20px;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #6b4324;
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    nav ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #anasayfa h1 {
+        font-size: 38px;
+    }
+}
