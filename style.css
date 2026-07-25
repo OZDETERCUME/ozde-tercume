@@ -1,11 +1,16 @@
-:root {
-    --navy: #143A63;
-    --navy-light: #2B5D8A;
-    --gold: #C89A2B;
-    --gold-light: #E2B95F;
-    --cream: #FCFAF5;
-    --white: #FFFFFF;
-    --text: #2E3A46;
+:root{
+    --navy:#4A3B31;
+    --navy-light:#705B4D;
+
+    --gold:#C49A6C;
+    --gold-light:#D9B58C;
+
+    --cream:#FAF8F4;
+    --white:#ffffff;
+
+    --text:#4A4038;
+
+    --shadow:0 15px 35px rgba(80,60,40,.10);
 }
 
 * {
@@ -20,7 +25,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #fafafa;
+    background:#FAF8F4;
     color: var(--text);
     line-height: 1.7;
 }
@@ -37,7 +42,7 @@ img {
 /* ÜST MENÜ */
 
 .site-header{
-    background:#163A63;
+    background:#4A3B31;
     border-bottom:4px solid var(--gold);
     position:sticky;
     top:0;
@@ -296,7 +301,7 @@ img {
 
 .about-box {
     background: var(--white);
-    border-left: 5px solid var(--gold);
+    border-left:6px solid #C49A6C;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(7, 26, 51, .08);
 }
@@ -363,7 +368,7 @@ img {
 /* ALT BÖLÜM */
 
 footer {
-    background: #041326;
+    background:#4A3B31;
     color: var(--white);
     text-align: center;
     padding: 45px 20px;
