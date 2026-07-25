@@ -206,12 +206,14 @@ section{
     background:var(--gold);
 }
 .hero-content h1{
-    font-size:clamp(42px,5vw,64px);
-    line-height:1.08;
+
+    font-size:clamp(30px,3.8vw,46px);
+    line-height:1.15;
     font-weight:800;
-    letter-spacing:-1.5px;
+    letter-spacing:-0.8px;
     color:#2F2924;
-    margin-bottom:26px;
+    margin-bottom:22px;
+    max-width:520px;
 }
 .hero-content p{
     font-size:18px;
