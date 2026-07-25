@@ -1,729 +1,944 @@
+/*==================================================
+  ÖZ-DE TERCÜME
+  STYLE.CSS
+  BÖLÜM 1
+  GENEL AYARLAR + HEADER
+==================================================*/
+
+/*========== ROOT ==========*/
 :root{
     --navy:#4A3B31;
-    --navy-light:#705B4D;
-
+    --navy-light:#6A5648;
     --gold:#C49A6C;
     --gold-light:#D9B58C;
-
+    --gold-hover:#B88652;
     --cream:#FAF8F4;
-    --white:#ffffff;
-
+    --cream-dark:#F3EEE6;
+    --white:#FFFFFF;
     --text:#4A4038;
-
+    --text-light:#6B6058;
+    --border:#ECE5DA;
+    --shadow-sm:0 5px 15px rgba(0,0,0,.06);
     --shadow:0 15px 35px rgba(80,60,40,.10);
+    --shadow-lg:0 25px 60px rgba(60,40,20,.15);
+    --radius:18px;
+    --transition:.35s ease;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*========== RESET ==========*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
+body{
+    font-family:Arial,Helvetica,sans-serif;
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background:#FAF8F4;
-    color: var(--text);
-    line-height: 1.7;
+    background:var(--cream);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
 }
+a{
+    text-decoration:none;
 
-a {
-    text-decoration: none;
+    transition:var(--transition);
 }
-
-img {
-    max-width: 100%;
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
 }
-
-
-/* ÜST MENÜ */
-
+ul{
+    list-style:none;
+}
+section{
+    position:relative;
+}
+/*========== HEADER ==========*/
 .site-header{
-    background:#4A3B31;
-    border-bottom:4px solid var(--gold);
     position:sticky;
     top:0;
-    z-index:1000;
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
+    left:0;
+    width:100%;
+    z-index:9999;
+    background:rgba(74,59,49,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:3px solid var(--gold);
+    box-shadow:var(--shadow);
 }
 .header-container{
     max-width:1400px;
     margin:auto;
-    min-height:90px;
-    padding:12px 5%;
+    padding:14px 5%;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:40px;
 }
-
-.logo img {
-    width: 88px;
-    height: 88px;
-    object-fit: contain;
-    transition: .3s;
+/*========== LOGO ==========*/
+.logo{
+    display:flex;
+    align-items:center;
 }
-
-.logo img:hover {
-    transform: scale(1.05);
+.logo img{
+   width:82px;
+    height:auto;
+    object-fit:contain;
+    transition:transform .35s ease;
+    filter:drop-shadow(0 5px 12px rgba(0,0,0,.15));
 }
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+.logo:hover img{
+    transform:scale(1.06);
 }
-
-.main-nav a {
-    color: var(--white);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: 0.2s;
+/*========== MENU ==========*/
+.main-nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
 }
-
-.main-nav a:hover {
-    color: var(--gold-light);
+.main-nav a{
+    position:relative;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:8px 0;
 }
-
-.header-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.main-nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.35s;
 }
-
-.header-contact a {
-    color: var(--gold-light);
-    font-weight: 700;
-    font-size: 14px;
+.main-nav a:hover{
+    color:var(--gold-light);
 }
-
-
-/* ANA GİRİŞ */
-
-/* =========================
-   HERO
-========================= */
-
+.main-nav a:hover::after{
+    width:100%;
+}
+/*========== HEADER CONTACT ==========*/
+.header-contact{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:6px;
+}
+.header-contact a{
+   color:var(--gold-light);
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+.header-contact a:hover{
+    color:#fff;
+}
+/*==================================================
+  HERO
+==================================================*/
 .hero{
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 88vh;
-    padding: 120px 8% 80px;
-    overflow: hidden;
-
-background:
-linear-gradient(
-90deg,
-rgba(248,245,239,.96) 0%,
-rgba(248,245,239,.90) 35%,
-rgba(248,245,239,.55) 55%,
-rgba(248,245,239,.15) 70%,
-rgba(248,245,239,0) 100%
-),
-url("images/hero.jpg");
-
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    min-height:88vh;
+    padding:120px 8% 90px;
+    overflow:hidden;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(250,248,244,.97) 0%,
+        rgba(250,248,244,.94) 35%,
+        rgba(250,248,244,.72) 52%,
+        rgba(250,248,244,.20) 68%,
+        rgba(250,248,244,0) 100%
+    ),
+    url("ofis1.jpg");
+    background-size:cover;
+    background-position:center right;
+    background-repeat:no-repeat;
 }
-
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.04),
+        rgba(0,0,0,.03)
+    );
+    pointer-events:none;
+}
 .hero-overlay{
     display:none;
 }
-
 .hero-content{
     position:relative;
     z-index:2;
-    max-width:600px;
-    color:#3d3129;
+    max-width:620px;
 }
-
-.hero-content h1{
-    font-size:clamp(42px,5vw,62px);
-    line-height:1.08;
+.since{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:22px;
+    color:var(--gold);
+    font-size:15px;
     font-weight:700;
-    margin-bottom:25px;
-    color:#2f2924;
+    letter-spacing:4px;
+    text-transform:uppercase;
 }
-
+.since::before{
+    content:"";
+    width:45px;
+    height:2px;
+    background:var(--gold);
+}
+.hero-content h1{
+    font-size:clamp(42px,5vw,64px);
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:-1.5px;
+    color:#2F2924;
+    margin-bottom:26px;
+}
 .hero-content p{
     font-size:18px;
-    line-height:1.8;
-    color:#65584c;
-    margin-bottom:35px;
-    max-width:520px;
+    line-height:1.9;
+    color:#5E5348;
+    max-width:540px;
+    margin-bottom:38px;
 }
-
 .hero .btn,
 .hero .primary-button{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-
-    padding:16px 36px;
-
-    background:#c89a63;
+    padding:17px 38px;
+    border-radius:60px;
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
     color:#fff;
-
-    border-radius:50px;
-
-    text-decoration:none;
-    font-weight:600;
-
-    transition:.3s;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.5px;
+    box-shadow:0 18px 35px rgba(196,154,108,.30);
+    transition:all .35s ease;
 }
-
 .hero .btn:hover,
 .hero .primary-button:hover{
-    background:#b78650;
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+    box-shadow:0 25px 45px rgba(196,154,108,.40);
+    background:linear-gradient(
+        135deg,
+        #B88756,
+        #D5B085
+    );
 }
-
-.since {
-    display: inline-block;
-    color: var(--gold-light);
-    font-size: 17px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    margin-bottom: 18px;
+.hero .btn:active,
+.hero .primary-button:active{
+    transform:translateY(-1px);
 }
-
-.hero-content h1{
-    font-size: clamp(2.3rem, 4vw, 3.6rem);
-    line-height: 1.15;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: #3d3129;
+/*==================================================
+  BUTON HOVER
+==================================================*/
+.primary-button:hover{
+    background:linear-gradient(
+        135deg,
+        #B88756,
+        #D7B387
+    );
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(196,154,108,.35);
 }
-.hero p{
-    font-size:18px;
-    line-height:1.8;
-    color:#f8f8f8;
-    margin-bottom:35px;
+/*==================================================
+  AVANTAJLAR
+==================================================*/
+.advantages{
+    background:linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+    );
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid rgba(255,255,255,.08);
+    overflow:hidden;
 }
-.primary-button{
+.advantage{
+    min-height:170px;
+    padding:35px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    color:#fff;
+    transition:all .35s ease;
+    border-right:1px solid rgba(255,255,255,.08);
+}
+.advantage:last-child{
+    border-right:none;
+}
+.advantage:hover{
+    background:rgba(255,255,255,.05);
+}
+.advantage-icon{
+    flex-shrink:0;
+    font-size:40px;
+    color:var(--gold);
+    transition:.35s;
+}
+.advantage:hover .advantage-icon{
+    transform:scale(1.10);
+}
+.advantage h3{
+    color:var(--gold-light);
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:6px;
+    letter-spacing:.8px;
+}
+.advantage p{
+    font-size:14px;
+    line-height:1.7;
+    color:rgba(255,255,255,.82);
+}
+/*==================================================
+  GENEL BÖLÜMLER
+==================================================*/
+.section-container{
+    max-width:1400px;
+    margin:auto;
+    padding:100px 5%;
+}
+.section-heading{
+    text-align:center;
+    margin-bottom:65px;
+}
+.section-heading span{
     display:inline-block;
+    color:var(--gold);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+.section-heading h2{
+    color:var(--navy);
+    font-size:clamp(34px,4vw,50px);
+    font-weight:800;
+    letter-spacing:-1px;
+    margin-bottom:15px;
+}
+.section-heading p{
+    max-width:700px;
+    margin:0 auto;
+    color:var(--text-light);
+    font-size:17px;
+    line-height:1.9;
+}
+/*==================================================
+  HİZMETLER
+==================================================*/
+.services{
+    background:var(--white);
+    position:relative;
+}
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:24px;
+    align-items:stretch;
+}
+/*==================================================
+  HİZMET KARTLARI
+==================================================*/
+.service-card{
+    position:relative;
+    min-height:220px;
+    background:linear-gradient(
+        180deg,
+        var(--navy),
+        var(--navy-light)
+    );
+    border-bottom:4px solid var(--gold);
+    border-radius:18px;
+    padding:35px 22px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+    transition:all .35s ease;
+}
+.service-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.08),
+        transparent 65%
+    );
+    opacity:0;
+    transition:.35s;
+}
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
+}
+.service-card:hover::before{
+    opacity:1;
+}
+.service-icon{
+    font-size:46px;
+    color:var(--gold-light);
+    margin-bottom:20px;
+    transition:.35s;
+}
+.service-card:hover .service-icon{
+    transform:scale(1.12);
+}
+.service-card h3{
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:1px;
+    line-height:1.6;
+}
+/*==================================================
+  HAKKIMIZDA
+==================================================*/
+.about{
+    background:var(--cream);
+    text-align:center;
+}
+.about .section-heading,
+.about-box{
+    max-width:1100px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.about-box{
+    background:#fff;
+    border-left:6px solid var(--gold);
+    border-radius:20px;
+    padding:55px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+.about-box:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-lg);
+}
+.about-box p{
+    font-size:18px;
+    line-height:2;
+    color:var(--text-light);
+}
+/*==================================================
+  İLETİŞİM
+==================================================*/
+.contact{
+    background:linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+    );
+}
+.contact .section-heading h2{
+    color:#fff;
+}
+.contact-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+.contact-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:20px;
+    padding:38px;
+    color:#fff;
+    backdrop-filter:blur(8px);
+    transition:all .35s ease;
+}
+.contact-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+}
+.contact-card h3{
+    color:var(--gold-light);
+    font-size:20px;
+    margin-bottom:22px;
+}
+.contact-card p{
+    color:rgba(255,255,255,.82);
+    line-height:1.8;
+    margin-bottom:24px;
+}
+.contact-card a{
+    display:block;
+    color:#fff;
+    margin-bottom:14px;
+    transition:.3s;
+    word-break:break-word;
+}
+.contact-card a:hover{
+    color:var(--gold-light);
+    padding-left:6px;
+}
+.contact-card .contact-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:18px;
+    padding:14px 28px;
     background:var(--gold);
     color:#fff;
-    padding:16px 34px;
     border-radius:50px;
     font-weight:700;
-    transition:.3s;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.35s;
 }
-
-.primary-button:hover{
-    background:#d9ab3f;
+.contact-card .contact-button:hover{
+    background:var(--gold-hover);
     transform:translateY(-3px);
 }
-
-
-/* AVANTAJLAR */
-
-.advantages {
-    background: var(--navy);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid rgba(255,255,255,.12);
-}
-
-.advantage {
-    min-height: 150px;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    color: var(--white);
-    border-right: 1px solid rgba(255,255,255,.13);
-}
-
-.advantage:last-child {
-    border-right: 0;
-}
-
-.advantage-icon {
-    color: var(--gold);
-    font-size: 35px;
-}
-
-.advantage h3 {
-    color: var(--gold-light);
-    font-size: 14px;
-    margin-bottom: 5px;
-    letter-spacing: .5px;
-}
-
-.advantage p {
-    font-size: 13px;
-    color: #d9e0e8;
-}
-
-
-/* GENEL BÖLÜMLER */
-
-.section-container {
-    max-width: 1400px;
-    margin: auto;
-    padding: 90px 5%;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-heading span {
-    color: var(--gold);
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-.section-heading h2 {
-    color: var(--navy);
-    font-size: clamp(32px, 4vw, 48px);
-    margin-top: 7px;
-}
-
-
-/* HİZMETLER */
-
-.services {
-    background: var(--white);
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 18px;
-}
-
-.service-card {
-    min-height: 200px;
-    background: var(--navy);
-    color: var(--white);
-    border-bottom: 4px solid var(--gold);
-    padding: 30px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: transform .2s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-icon {
-    color: var(--gold-light);
-    font-size: 42px;
-    margin-bottom: 18px;
-}
-
-.service-card h3 {
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-
-/* HAKKIMIZDA */
-
-.about {
-    max-width: none;
-    background: var(--cream);
-    text-align: center;
-}
-
-.about .section-heading,
-.about-box {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-box {
-    background: var(--white);
-    border-left:6px solid #C49A6C;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(7, 26, 51, .08);
-}
-
-.about-box p {
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-
-/* İLETİŞİM */
-
-.contact {
-    max-width: none;
-    background: var(--navy);
-}
-
-.contact .section-heading h2 {
-    color: var(--white);
-}
-
-.contact-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.contact-card {
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(201,162,77,.45);
-    padding: 35px;
-    color: var(--white);
-}
-
-.contact-card h3 {
-    color: var(--gold-light);
-    margin-bottom: 20px;
-}
-
-.contact-card p {
-    margin-bottom: 25px;
-}
-
-.contact-card a {
-    display: block;
-    color: var(--white);
-    margin-bottom: 13px;
-    overflow-wrap: anywhere;
-}
-
-.contact-card a:hover {
-    color: var(--gold-light);
-}
-
-.contact-card .contact-button {
-    display: inline-block;
-    color: var(--navy);
-    margin-top: 10px;
-}
-
-
-/* ALT BÖLÜM */
-
-footer {
-    background:#4A3B31;
-    color: var(--white);
-    text-align: center;
-    padding: 45px 20px;
-    border-top: 3px solid var(--gold);
-}
-
-footer img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    margin-bottom: 12px;
-}
-
-footer strong {
-    display: block;
-    color: var(--gold);
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer small {
-    color: #cccccc;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin: 8px 0;
-    color: var(--white);
-}
-
-.social-link:hover {
-    color: var(--gold-light);
-}
-
-.instagram-icon,
-.facebook-icon {
-    font-size: 30px;
-    color: var(--gold-light);
-}
-
-.office-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.office-gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.15);
-    transition: transform .3s ease;
-}
-
-.office-gallery img:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 992px) {
-    .office-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .office-gallery {
-        grid-template-columns: 1fr;
-    }
-}
-/* ============================
-   HERO BUTONLARI
-============================ */
-
-.hero-buttons{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-    margin-top:15px;
-}
-
-.secondary-button{
-    display:inline-block;
-    padding:15px 28px;
-    border:2px solid var(--gold);
+/*==================================================
+  FOOTER
+==================================================*/
+footer{
+    background:linear-gradient(
+        135deg,
+        var(--navy),
+        #3B2F27
+    );
     color:#fff;
+    text-align:center;
+    padding:60px 20px;
+    border-top:4px solid var(--gold);
+    position:relative;
+}
+footer::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:120px;
+    height:3px;
+    background:var(--gold-light);
+}
+footer img{
+    width:95px;
+    height:auto;
+    object-fit:contain;
+    margin:0 auto 18px;
+    filter:drop-shadow(0 6px 15px rgba(0,0,0,.20));
+    transition:.35s;
+}
+footer img:hover{
+    transform:scale(1.05);
+}
+footer strong{
+    display:block;
+    color:var(--gold-light);
+    font-size:24px;
     font-weight:700;
-    border-radius:4px;
-    transition:.3s;
+    margin-bottom:15px;
+    letter-spacing:1px;
 }
-
-.secondary-button:hover{
-    background:var(--gold);
-    color:var(--navy);
+footer p{
+    color:rgba(255,255,255,.85);
+    margin:12px 0;
+    line-height:1.8;
 }
-
-
-/* ============================
-   OFİS GALERİSİ
-============================ */
-
+footer small{
+    display:block;
+    margin-top:25px;
+    color:rgba(255,255,255,.60);
+    font-size:13px;
+}
+/*==================================================
+  SOSYAL MEDYA
+==================================================*/
+.social-link{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin:10px;
+    color:#fff;
+    transition:all .35s ease;
+}
+.social-link:hover{
+    color:var(--gold-light);
+    transform:translateY(-3px);
+}
+.instagram-icon,
+.facebook-icon{
+    font-size:30px;
+    color:var(--gold);
+    transition:.35s;
+}
+.social-link:hover .instagram-icon,
+.social-link:hover .facebook-icon{
+    transform:scale(1.15);
+}
+/*==================================================
+  OFİS GALERİSİ
+==================================================*/
 .office-gallery{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:22px;
-    margin-top:40px;
+    gap:24px;
+    margin-top:50px;
 }
-
 .office-gallery img{
     width:100%;
-    height:250px;
+    height:240px;
     object-fit:cover;
-    border-radius:12px;
-    cursor:pointer;
-    transition:.35s;
-    box-shadow:0 12px 30px rgba(0,0,0,.18);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    transition:all .35s ease;
 }
-
 .office-gallery img:hover{
     transform:translateY(-8px) scale(1.03);
+    box-shadow:var(--shadow-lg);
 }
-
-
-/* ============================
-   GOOGLE YORUMLARI
-============================ */
-
+/*==================================================
+  HERO BUTONLARI
+==================================================*/
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:20px;
+}
+/*==================================================
+  TABLET
+==================================================*/
+@media (max-width:992px){
+    .office-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+/*==================================================
+  TELEFON
+==================================================*/
+@media (max-width:576px){
+    .office-gallery{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+    .office-gallery img{
+        height:230px;
+    }
+    .hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+/*==================================================
+  İKİNCİL BUTON
+==================================================*/
+.secondary-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 30px;
+    border:2px solid var(--gold);
+    border-radius:50px;
+    background:transparent;
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.5px;
+    transition:all .35s ease;
+}
+.secondary-button:hover{
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    color:#fff;
+    border-color:var(--gold-light);
+    transform:translateY(-3px);
+    box-shadow:0 18px 35px rgba(196,154,108,.30);
+}
+/*==================================================
+  GOOGLE YORUMLARI
+==================================================*/
 .reviews{
-    background:#faf8f3;
+    background:var(--cream);
 }
-
 .reviews-container{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+    grid-template-columns:repeat(2,1fr);
+    gap:45px;
     align-items:center;
 }
-
 .google-score{
     background:#fff;
-    border-radius:14px;
-    padding:45px;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    border-radius:20px;
+    padding:50px 45px;
     text-align:center;
     border-top:5px solid var(--gold);
+    box-shadow:var(--shadow);
+    transition:.35s;
 }
-
+.google-score:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-lg);
+}
 .google-score h3{
     color:var(--navy);
-    font-size:30px;
-    margin:15px 0;
+    font-size:32px;
+    font-weight:800;
+    margin:18px 0;
 }
-
 .stars{
-    color:#fbbc04;
+    color:#F4B400;
     font-size:34px;
     letter-spacing:6px;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
-
 .google-score p{
-    margin:20px 0 30px;
-    color:#555;
-    line-height:1.8;
+    color:var(--text-light);
+    line-height:1.9;
+    margin:22px 0 32px;
 }
-
 .review-cards{
     display:flex;
     flex-direction:column;
-    gap:20px;
+    gap:24px;
 }
-
 .review-card{
     background:#fff;
-    padding:28px;
+    padding:30px;
     border-left:5px solid var(--gold);
-    border-radius:10px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-radius:18px;
+    box-shadow:var(--shadow-sm);
+    transition:.35s;
 }
-
+.review-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+.review-card strong{
+    display:block;
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:10px;
+}
 .review-card p{
+    color:var(--text-light);
+    line-height:1.8;
     margin-top:10px;
-    line-height:1.7;
 }
-
-
-/* ============================
-   HOVER EFEKTLERİ
-============================ */
-
-.service-card{
-    transition:.35s;
+/*==================================================
+  HOVER EFEKTLERİ
+==================================================*/
+.service-card,
+.contact-card,
+.review-card,
+.google-score,
+.about-box{
+    
+    transition:all .35s ease;
 }
-
 .service-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 18px 35px rgba(0,0,0,.15);
-}
-
-.contact-card{
-    transition:.35s;
-}
-
-.contact-card:hover{
     transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
 }
-
-
-/* ============================
-   MOBİL
-============================ */
-
-@media(max-width:991px){
-
-.header-container{
-    flex-direction:column;
-    text-align:center;
+.contact-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-lg);
 }
-
-.main-nav{
-    flex-wrap:wrap;
+.review-card:hover{
+    transform:translateY(-5px);
 }
-
-.service-grid{
-    grid-template-columns:repeat(2,1fr);
+.google-score:hover{
+    transform:translateY(-6px);
 }
-
-.contact-grid{
-    grid-template-columns:1fr;
+.about-box:hover{
+    transform:translateY(-5px);
 }
-
-.reviews-container{
-    grid-template-columns:1fr;
+/*==================================================
+  RESPONSIVE
+==================================================*/
+@media (max-width:991px){
+    .header-container{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        gap:22px;
+    }
+    .main-nav{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+    .header-contact{
+        align-items:center;
+    }
+    .hero{
+        padding:100px 6% 70px;
+        background-position:center;
+    }
+    .hero-content{
+        max-width:100%;
+    }
+    .hero-content h1{
+        font-size:clamp(42px,6vw,55px);
+    }
+    .advantages{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .reviews-container{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+    .office-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
-
-.office-gallery{
-    grid-template-columns:repeat(2,1fr);
+@media (max-width:576px){
+    .section-container{
+        padding:70px 6%;
+    }
+    .hero{
+        min-height:auto;
+        padding:90px 6% 60px;
+    }
+    .hero-content h1{
+        font-size:36px;
+        line-height:1.2;
+    }
+    .hero-content p{
+        font-size:16px;
+    }
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .primary-button,
+    .secondary-button{
+        width:100%;
+        justify-content:center;
+    }
+    .advantages{
+        grid-template-columns:1fr;
+    }
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+    .office-gallery{
+        grid-template-columns:1fr;
+    }
+    .office-gallery img{
+        height:220px;
+    }
 }
-
-.hero h1{
-    font-size:55px;
+/*==================================================
+  YUKARI ÇIK BUTONU
+==================================================*/
+#topButton{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    width:58px;
+    height:58px;
+    border:none;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+    color:var(--navy);
+    font-size:24px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(0,0,0,.22);
+    opacity:0;
+    visibility:hidden;
+    transition:all .35s ease;
+    z-index:9999;
 }
-
+#topButton:hover{
+    transform:translateY(-5px);
+    box-shadow:0 22px 45px rgba(0,0,0,.28);
 }
-
-@media(max-width:576px){
-
-.service-grid{
-    grid-template-columns:1fr;
+#topButton.show{
+    opacity:1;
+    visibility:visible;
 }
-
-.office-gallery{
-    grid-template-columns:1fr;
+/*==================================================
+  YUKARI ÇIK BUTONU
+==================================================*/
+#topButton{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    width:58px;
+    height:58px;
+    border:none;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+    color:var(--navy);
+    font-size:24px;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.22);
+    opacity:0;
+    visibility:hidden;
+    transition:all .35s ease;
+    z-index:9999;
 }
-
-.hero h1{
-    font-size:38px;
+#topButton.show{
+    opacity:1;
+    visibility:visible;
 }
-
-.hero-buttons{
-    flex-direction:column;
+#topButton:hover{
+    background:linear-gradient(
+        135deg,
+        var(--gold-hover),
+        var(--gold)
+    );
+    color:#fff;
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 22px 45px rgba(0,0,0,.28);
 }
-
-.primary-button,
-.secondary-button{
-    width:100%;
-    text-align:center;
-}
-
-}
-/* Yukarı Çık Butonu */
-
-#topButton {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 55px;
-    height: 55px;
-    border: none;
-    border-radius: 50%;
-    background: #c9a24d;
-    color: #071a33;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,.25);
-    opacity: 0;
-    visibility: hidden;
-    transition: .35s;
-    z-index: 9999;
-}
-
-#topButton.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#topButton:hover {
-    transform: translateY(-5px);
-    background: #e0c579;
+#topButton:active{
+    transform:translateY(-2px);
 }
