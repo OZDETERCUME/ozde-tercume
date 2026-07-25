@@ -1,3 +1,13 @@
+:root {
+    --navy: #071a33;
+    --navy-light: #12365c;
+    --gold: #c9a24d;
+    --gold-light: #e0c579;
+    --cream: #f7f4ed;
+    --white: #ffffff;
+    --text: #172033;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,83 +19,370 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f7f3ee;
-    color: #3b2415;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-header {
-    background: #ffffff;
-    padding: 18px 7%;
+a {
+    text-decoration: none;
 }
 
-nav {
+img {
+    max-width: 100%;
+}
+
+
+/* ÜST MENÜ */
+
+.site-header {
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: auto;
+    min-height: 110px;
+    padding: 10px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .logo img {
-    height: 90px;
-    width: auto;
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
     display: block;
 }
 
-nav ul {
+.main-nav {
     display: flex;
-    gap: 28px;
-    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
 }
 
-nav a {
-    color: #3b2415;
-    text-decoration: none;
-    font-weight: 600;
+.main-nav a {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.2s;
 }
 
-#anasayfa {
-    min-height: 75vh;
+.main-nav a:hover {
+    color: var(--gold-light);
+}
+
+.header-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header-contact a {
+    color: var(--gold-light);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* ANA GİRİŞ */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 22, 43, 0.94) 0%,
+            rgba(7, 26, 51, 0.78) 48%,
+            rgba(7, 26, 51, 0.20) 100%
+        ),
+        url("hero-bg.jpg") center / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(201, 162, 77, 0.10),
+            transparent 40%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 90px 0;
+    color: var(--white);
+}
+
+.since {
+    display: inline-block;
+    color: var(--gold-light);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(45px, 6vw, 82px);
+    line-height: 0.98;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.hero p {
+    max-width: 590px;
+    font-size: 19px;
+    color: #f1f1f1;
+    margin-bottom: 35px;
+}
+
+.primary-button,
+.contact-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 15px 27px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.primary-button:hover,
+.contact-button:hover {
+    background: var(--gold-light);
+}
+
+
+/* AVANTAJLAR */
+
+.advantages {
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.advantage {
+    min-height: 150px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    color: var(--white);
+    border-right: 1px solid rgba(255,255,255,.13);
+}
+
+.advantage:last-child {
+    border-right: 0;
+}
+
+.advantage-icon {
+    color: var(--gold);
+    font-size: 35px;
+}
+
+.advantage h3 {
+    color: var(--gold-light);
+    font-size: 14px;
+    margin-bottom: 5px;
+    letter-spacing: .5px;
+}
+
+.advantage p {
+    font-size: 13px;
+    color: #d9e0e8;
+}
+
+
+/* GENEL BÖLÜMLER */
+
+.section-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 90px 5%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(32px, 4vw, 48px);
+    margin-top: 7px;
+}
+
+
+/* HİZMETLER */
+
+.services {
+    background: var(--white);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    min-height: 200px;
+    background: var(--navy);
+    color: var(--white);
+    border-bottom: 4px solid var(--gold);
+    padding: 30px 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #3b2415, #8a6548);
-    color: white;
+    transition: transform .2s;
 }
 
-#anasayfa h1 {
-    font-size: 52px;
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    color: var(--gold-light);
+    font-size: 42px;
     margin-bottom: 18px;
 }
 
-#anasayfa p {
-    font-size: 20px;
+.service-card h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
-section {
-    padding: 70px 8%;
+
+/* HAKKIMIZDA */
+
+.about {
+    max-width: none;
+    background: var(--cream);
+    text-align: center;
 }
 
-section h2 {
+.about .section-heading,
+.about-box {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-box {
+    background: var(--white);
+    border-left: 5px solid var(--gold);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(7, 26, 51, .08);
+}
+
+.about-box p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+
+/* İLETİŞİM */
+
+.contact {
+    max-width: none;
+    background: var(--navy);
+}
+
+.contact .section-heading h2 {
+    color: var(--white);
+}
+
+.contact-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(201,162,77,.45);
+    padding: 35px;
+    color: var(--white);
+}
+
+.contact-card h3 {
+    color: var(--gold-light);
     margin-bottom: 20px;
-    color: #6b4324;
 }
 
-@media (max-width: 700px) {
-    nav {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    nav ul {
-        gap: 14px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #anasayfa h1 {
-        font-size: 38px;
-    }
+.contact-card p {
+    margin-bottom: 25px;
 }
+
+.contact-card a {
+    display: block;
+    color: var(--white);
+    margin-bottom: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    color: var(--gold-light);
+}
+
+.contact-card .contact-button {
+    display: inline-block;
+    color: var(--navy);
+    margin-top: 10px;
+}
+
+
+/* ALT BÖLÜM */
+
+footer {
+    background: #041326;
+    color: var(--white);
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 3px solid var(--gold);
+}
+
+footer img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+footer strong {
+    display: block;
+    color: var(--
