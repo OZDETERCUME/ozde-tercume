@@ -1,5 +1,4 @@
 User-agent: *
-
 Allow: /
 
-Sitemap: https://www.ozdetercume.com.tr/sitemap.xml
+Sitemap: https://ozdetercume.com.tr/sitemap.xml
