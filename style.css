@@ -553,8 +553,8 @@ background:linear-gradient(
 }
 
 .office-gallery img:hover{
-    transform:translateY(-8px) scale(1.03);
-    box-shadow:var(--shadow-lg);
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:var(--shadow);
 }
 
 /*==================================================
