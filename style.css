@@ -592,11 +592,11 @@ background:linear-gradient(
     margin:0 auto 18px;
 }
 
-.google-score h3{
-    color:var(--navy);
-    font-size:32px;
-    font-weight:800;
-    margin:18px 0;
+.google-logo{
+    width:90px;
+    height:auto;
+    margin:0 auto 18px;
+    display:block;
 }
 
 .stars{
