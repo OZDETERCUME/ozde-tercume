@@ -616,9 +616,8 @@ background:linear-gradient(
 .review-cards{
     display:flex;
     flex-direction:column;
-    gap:24px;
+    gap:18px;
 }
-
 .review-card{
     background:#fff;
     padding:22px;
