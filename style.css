@@ -588,8 +588,10 @@ background:linear-gradient(
 }
 
 .google-logo{
-    width:90px;
-    margin:0 auto 18px;
+    display:block;
+    width:120px;
+    height:auto;
+    margin:0 auto 20px;
 }
 
 .google-logo{
