@@ -567,9 +567,9 @@ background:linear-gradient(
 
 .reviews-container{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:45px;
-    align-items:center;
+    grid-template-columns:380px 1fr;
+    gap:30px;
+    align-items:start;
 }
 
 .google-score{
@@ -616,7 +616,8 @@ background:linear-gradient(
 .review-cards{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:20px;
+    justify-content:flex-start;
 }
 .review-card{
     background:#fff;
@@ -624,7 +625,8 @@ background:linear-gradient(
     border-left:5px solid var(--gold);
     border-radius:16px;
     box-shadow:var(--shadow-sm);
-    transition:all .35s ease;
+    transition:.3s;
+    min-height:170px;
 }
 
 .review-card:hover{
