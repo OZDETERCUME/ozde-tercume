@@ -627,7 +627,7 @@ background:linear-gradient(
 }
 
 .review-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-3px);
     box-shadow:var(--shadow);
 }
 
