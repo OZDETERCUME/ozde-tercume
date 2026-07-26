@@ -575,7 +575,7 @@ background:linear-gradient(
 .google-score{
     background:#fff;
     border-radius:20px;
-    padding:50px 45px;
+    padding:35px 30px;
     text-align:center;
     border-top:5px solid var(--gold);
     box-shadow:var(--shadow);
