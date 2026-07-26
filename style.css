@@ -1171,3 +1171,21 @@ html[dir="rtl"] .whatsapp-float{
     }
 
 }
+/*=========================================
+  WEBSITE LINK
+=========================================*/
+
+.website-link i{
+    color:var(--gold);
+    font-size:28px;
+    transition:.35s;
+}
+
+.website-link:hover i{
+    transform:scale(1.15);
+}
+
+.website-link span{
+    font-weight:600;
+    letter-spacing:.3px;
+}
