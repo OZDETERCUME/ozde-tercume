@@ -1,8 +1,6 @@
 /*==================================================
   ÖZ-DE TERCÜME
   STYLE.CSS
-  BÖLÜM 1
-  GENEL AYARLAR + HEADER
 ==================================================*/
 
 /*========== ROOT ==========*/
@@ -24,44 +22,46 @@
     --radius:18px;
     --transition:.35s ease;
 }
+
 /*========== RESET ==========*/
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
 html{
     scroll-behavior:smooth;
 }
+
 body{
     font-family:Arial,Helvetica,sans-serif;
-
     background:var(--cream);
-
     color:var(--text);
-
     line-height:1.7;
-
     overflow-x:hidden;
-
     -webkit-font-smoothing:antialiased;
 }
+
 a{
     text-decoration:none;
-
     transition:var(--transition);
 }
+
 img{
     display:block;
     max-width:100%;
     height:auto;
 }
+
 ul{
     list-style:none;
 }
+
 section{
     position:relative;
 }
+
 /*========== HEADER ==========*/
 .site-header{
     position:sticky;
@@ -74,6 +74,7 @@ section{
     border-bottom:3px solid var(--gold);
     box-shadow:var(--shadow);
 }
+
 .header-container{
     max-width:1400px;
     margin:auto;
@@ -83,36 +84,42 @@ section{
     justify-content:space-between;
     gap:40px;
 }
+
 /*========== LOGO ==========*/
 .logo{
     display:flex;
     align-items:center;
 }
+
 .logo img{
-   width:82px;
+    width:82px;
     height:auto;
     object-fit:contain;
     transition:transform .35s ease;
     filter:drop-shadow(0 5px 12px rgba(0,0,0,.15));
 }
+
 .logo:hover img{
     transform:scale(1.06);
 }
+
 /*========== MENU ==========*/
 .main-nav{
     display:flex;
     align-items:center;
     gap:34px;
 }
+
 .main-nav a{
     position:relative;
     color:#fff;
-    font-size:14px;
+      font-size:14px;
     font-weight:700;
     letter-spacing:1px;
     text-transform:uppercase;
     padding:8px 0;
 }
+
 .main-nav a::after{
     content:"";
     position:absolute;
@@ -121,14 +128,17 @@ section{
     width:0;
     height:2px;
     background:var(--gold);
-    transition:.35s;
+    transition:width .35s ease;
 }
+
 .main-nav a:hover{
     color:var(--gold-light);
 }
+
 .main-nav a:hover::after{
     width:100%;
 }
+
 /*========== HEADER CONTACT ==========*/
 .header-contact{
     display:flex;
@@ -136,18 +146,54 @@ section{
     align-items:flex-end;
     gap:6px;
 }
+
 .header-contact a{
-   color:var(--gold-light);
+    color:var(--gold-light);
     font-size:14px;
     font-weight:700;
-    transition:.3s;
 }
+
 .header-contact a:hover{
     color:#fff;
 }
+
+/*========== LANGUAGE SWITCHER ==========*/
+.language-switcher{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.language-switcher a{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.10);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    transition:all .35s ease;
+}
+
+.language-switcher a:hover{
+    background:var(--gold);
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.language-switcher a.active{
+    background:var(--gold);
+    color:#fff;
+    box-shadow:0 5px 15px rgba(196,154,108,.35);
+}
+
 /*==================================================
   HERO
 ==================================================*/
+
 .hero{
     position:relative;
     display:flex;
@@ -155,6 +201,7 @@ section{
     min-height:88vh;
     padding:120px 8% 90px;
     overflow:hidden;
+
     background:
     linear-gradient(
         90deg,
@@ -165,29 +212,34 @@ section{
         rgba(250,248,244,0) 100%
     ),
     url("ofis1.jpg");
+
     background-size:cover;
     background-position:center right;
     background-repeat:no-repeat;
 }
+
 .hero::before{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(
+      background:linear-gradient(
         180deg,
         rgba(255,255,255,.04),
         rgba(0,0,0,.03)
     );
     pointer-events:none;
 }
+
 .hero-overlay{
     display:none;
 }
+
 .hero-content{
     position:relative;
     z-index:2;
     max-width:620px;
 }
+
 .since{
     display:inline-flex;
     align-items:center;
@@ -199,22 +251,24 @@ section{
     letter-spacing:4px;
     text-transform:uppercase;
 }
+
 .since::before{
     content:"";
     width:45px;
     height:2px;
     background:var(--gold);
 }
-.hero-content h1{
 
+.hero-content h1{
     font-size:clamp(30px,3.8vw,46px);
     line-height:1.15;
     font-weight:800;
-    letter-spacing:-0.8px;
+    letter-spacing:-.8px;
     color:#2F2924;
     margin-bottom:22px;
     max-width:520px;
 }
+
 .hero-content p{
     font-size:18px;
     line-height:1.9;
@@ -222,7 +276,7 @@ section{
     max-width:540px;
     margin-bottom:38px;
 }
-.hero .btn,
+
 .hero .primary-button{
     display:inline-flex;
     align-items:center;
@@ -241,7 +295,7 @@ section{
     box-shadow:0 18px 35px rgba(196,154,108,.30);
     transition:all .35s ease;
 }
-.hero .btn:hover,
+
 .hero .primary-button:hover{
     transform:translateY(-4px);
     box-shadow:0 25px 45px rgba(196,154,108,.40);
@@ -251,25 +305,11 @@ section{
         #D5B085
     );
 }
-.hero .btn:active,
-.hero .primary-button:active{
-    transform:translateY(-1px);
-}
-/*==================================================
-  BUTON HOVER
-==================================================*/
-.primary-button:hover{
-    background:linear-gradient(
-        135deg,
-        #B88756,
-        #D7B387
-    );
-    transform:translateY(-4px);
-    box-shadow:0 20px 40px rgba(196,154,108,.35);
-}
+
 /*==================================================
   AVANTAJLAR
 ==================================================*/
+
 .advantages{
     background:linear-gradient(
         135deg,
@@ -281,6 +321,7 @@ section{
     border-top:1px solid rgba(255,255,255,.08);
     overflow:hidden;
 }
+
 .advantage{
     min-height:170px;
     padding:35px 28px;
@@ -289,21 +330,25 @@ section{
     justify-content:center;
     gap:18px;
     color:#fff;
-    transition:all .35s ease;
+    transition:.35s ease;
     border-right:1px solid rgba(255,255,255,.08);
 }
+
 .advantage:last-child{
     border-right:none;
 }
+
 .advantage:hover{
     background:rgba(255,255,255,.05);
 }
+
 .advantage-icon{
     flex-shrink:0;
     font-size:40px;
     color:var(--gold);
     transition:.35s;
 }
+
 .advantage:hover .advantage-icon{
     transform:scale(1.10);
 }
@@ -314,23 +359,28 @@ section{
     margin-bottom:6px;
     letter-spacing:.8px;
 }
+
 .advantage p{
     font-size:14px;
     line-height:1.7;
     color:rgba(255,255,255,.82);
 }
+
 /*==================================================
   GENEL BÖLÜMLER
 ==================================================*/
+
 .section-container{
     max-width:1400px;
     margin:auto;
     padding:100px 5%;
 }
+
 .section-heading{
     text-align:center;
     margin-bottom:65px;
 }
+
 .section-heading span{
     display:inline-block;
     color:var(--gold);
@@ -340,6 +390,7 @@ section{
     text-transform:uppercase;
     margin-bottom:12px;
 }
+
 .section-heading h2{
     color:var(--navy);
     font-size:clamp(34px,4vw,50px);
@@ -347,6 +398,7 @@ section{
     letter-spacing:-1px;
     margin-bottom:15px;
 }
+
 .section-heading p{
     max-width:700px;
     margin:0 auto;
@@ -354,22 +406,27 @@ section{
     font-size:17px;
     line-height:1.9;
 }
+
 /*==================================================
   HİZMETLER
 ==================================================*/
+
 .services{
     background:var(--white);
     position:relative;
 }
+
 .service-grid{
     display:grid;
     grid-template-columns:repeat(6,1fr);
     gap:24px;
     align-items:stretch;
 }
+
 /*==================================================
   HİZMET KARTLARI
 ==================================================*/
+
 .service-card{
     position:relative;
     min-height:220px;
@@ -391,6 +448,7 @@ section{
     box-shadow:var(--shadow-sm);
     transition:all .35s ease;
 }
+
 .service-card::before{
     content:"";
     position:absolute;
@@ -403,22 +461,27 @@ section{
     opacity:0;
     transition:.35s;
 }
+
 .service-card:hover{
     transform:translateY(-8px);
     box-shadow:var(--shadow-lg);
 }
+
 .service-card:hover::before{
     opacity:1;
 }
+
 .service-icon{
     font-size:46px;
     color:var(--gold-light);
     margin-bottom:20px;
     transition:.35s;
 }
+
 .service-card:hover .service-icon{
     transform:scale(1.12);
 }
+
 .service-card h3{
     font-size:15px;
     font-weight:700;
@@ -428,193 +491,58 @@ section{
 /*==================================================
   HAKKIMIZDA
 ==================================================*/
+
 .about{
     background:var(--cream);
     text-align:center;
 }
+
 .about .section-heading,
 .about-box{
     max-width:1100px;
     margin-left:auto;
     margin-right:auto;
 }
+
 .about-box{
-    background:#fff;
+    background:var(--white);
     border-left:6px solid var(--gold);
     border-radius:20px;
     padding:55px;
     box-shadow:var(--shadow);
-    transition:.35s;
+    transition:all .35s ease;
 }
+
 .about-box:hover{
     transform:translateY(-5px);
     box-shadow:var(--shadow-lg);
 }
+
 .about-box p{
     font-size:18px;
     line-height:2;
     color:var(--text-light);
 }
-/*==================================================
-  İLETİŞİM
-==================================================*/
-.contact{
-    background:linear-gradient(
-        135deg,
-        var(--navy),
-        var(--navy-light)
-    );
+
+.about-box strong{
+    color:var(--navy);
 }
-.contact .section-heading h2{
-    color:#fff;
-}
-.contact-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-}
-.contact-card{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:20px;
-    padding:38px;
-    color:#fff;
-    backdrop-filter:blur(8px);
-    transition:all .35s ease;
-}
-.contact-card:hover{
-    transform:translateY(-6px);
-    border-color:var(--gold);
-    box-shadow:0 20px 40px rgba(0,0,0,.20);
-}
-.contact-card h3{
-    color:var(--gold-light);
-    font-size:20px;
-    margin-bottom:22px;
-}
-.contact-card p{
-    color:rgba(255,255,255,.82);
-    line-height:1.8;
-    margin-bottom:24px;
-}
-.contact-card a{
-    display:block;
-    color:#fff;
-    margin-bottom:14px;
-    transition:.3s;
-    word-break:break-word;
-}
-.contact-card a:hover{
-    color:var(--gold-light);
-    padding-left:6px;
-}
-.contact-card .contact-button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    margin-top:18px;
-    padding:14px 28px;
-    background:var(--gold);
-    color:#fff;
-    border-radius:50px;
-    font-weight:700;
-    transition:.35s;
-}
-.contact-card .contact-button:hover{
-    background:var(--gold-hover);
-    transform:translateY(-3px);
-}
-/*==================================================
-  FOOTER
-==================================================*/
-footer{
-    background:linear-gradient(
-        135deg,
-        var(--navy),
-        #3B2F27
-    );
-    color:#fff;
-    text-align:center;
-    padding:60px 20px;
-    border-top:4px solid var(--gold);
-    position:relative;
-}
-footer::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:50%;
-    transform:translateX(-50%);
-    width:120px;
-    height:3px;
-    background:var(--gold-light);
-}
-footer img{
-    width:95px;
-    height:auto;
-    object-fit:contain;
-    margin:0 auto 18px;
-    filter:drop-shadow(0 6px 15px rgba(0,0,0,.20));
-    transition:.35s;
-}
-footer img:hover{
-    transform:scale(1.05);
-}
-footer strong{
-    display:block;
-    color:var(--gold-light);
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:15px;
-    letter-spacing:1px;
-}
-footer p{
-    color:rgba(255,255,255,.85);
-    margin:12px 0;
-    line-height:1.8;
-}
-footer small{
-    display:block;
-    margin-top:25px;
-    color:rgba(255,255,255,.60);
-    font-size:13px;
-}
-/*==================================================
-  SOSYAL MEDYA
-==================================================*/
-.social-link{
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-    margin:10px;
-    color:#fff;
-    transition:all .35s ease;
-}
-.social-link:hover{
-    color:var(--gold-light);
-    transform:translateY(-3px);
-}
-.instagram-icon,
-.facebook-icon{
-    font-size:30px;
-    color:var(--gold);
-    transition:.35s;
-}
-.social-link:hover .instagram-icon,
-.social-link:hover .facebook-icon{
-    transform:scale(1.15);
-}
+
 /*==================================================
   OFİS GALERİSİ
 ==================================================*/
+
+.office{
+    background:var(--white);
+}
+
 .office-gallery{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:24px;
     margin-top:50px;
 }
+
 .office-gallery img{
     width:100%;
     height:240px;
@@ -623,79 +551,27 @@ footer small{
     box-shadow:var(--shadow);
     transition:all .35s ease;
 }
+
 .office-gallery img:hover{
     transform:translateY(-8px) scale(1.03);
     box-shadow:var(--shadow-lg);
 }
-/*==================================================
-  HERO BUTONLARI
-==================================================*/
-.hero-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:18px;
-    margin-top:20px;
-}
-/*==================================================
-  TABLET
-==================================================*/
-@media (max-width:992px){
-    .office-gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-/*==================================================
-  TELEFON
-==================================================*/
-@media (max-width:576px){
-    .office-gallery{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-    .office-gallery img{
-        height:230px;
-    }
-    .hero-buttons{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-}
-/*==================================================
-  İKİNCİL BUTON
-==================================================*/
-.secondary-button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:16px 30px;
-    border:2px solid var(--gold);
-    border-radius:50px;
-    background:transparent;
-    color:#fff;
-    font-size:15px;
-    font-weight:700;
-    letter-spacing:.5px;
-    transition:all .35s ease;
-}
-.secondary-button:hover{
-    background:linear-gradient(135deg,var(--gold),var(--gold-light));
-    color:#fff;
-    border-color:var(--gold-light);
-    transform:translateY(-3px);
-    box-shadow:0 18px 35px rgba(196,154,108,.30);
-}
+
 /*==================================================
   GOOGLE YORUMLARI
 ==================================================*/
+
 .reviews{
     background:var(--cream);
 }
+
 .reviews-container{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:45px;
     align-items:center;
 }
+
 .google-score{
     background:#fff;
     border-radius:20px;
@@ -703,24 +579,33 @@ footer small{
     text-align:center;
     border-top:5px solid var(--gold);
     box-shadow:var(--shadow);
-    transition:.35s;
+    transition:all .35s ease;
 }
+
 .google-score:hover{
     transform:translateY(-6px);
     box-shadow:var(--shadow-lg);
 }
+
+.google-logo{
+    width:90px;
+    margin:0 auto 18px;
+}
+
 .google-score h3{
     color:var(--navy);
     font-size:32px;
     font-weight:800;
     margin:18px 0;
 }
+
 .stars{
     color:#F4B400;
     font-size:34px;
     letter-spacing:6px;
     margin-bottom:18px;
 }
+
 .google-score p{
     color:var(--text-light);
     line-height:1.9;
@@ -731,206 +616,373 @@ footer small{
     flex-direction:column;
     gap:24px;
 }
+
 .review-card{
     background:#fff;
     padding:30px;
     border-left:5px solid var(--gold);
     border-radius:18px;
     box-shadow:var(--shadow-sm);
-    transition:.35s;
+    transition:all .35s ease;
 }
+
 .review-card:hover{
     transform:translateY(-5px);
     box-shadow:var(--shadow);
 }
+
 .review-card strong{
     display:block;
     color:var(--navy);
     font-size:17px;
     margin-bottom:10px;
 }
+
 .review-card p{
     color:var(--text-light);
     line-height:1.8;
     margin-top:10px;
 }
+
 /*==================================================
-  HOVER EFEKTLERİ
+  İLETİŞİM
 ==================================================*/
-.service-card,
-.contact-card,
-.review-card,
-.google-score,
-.about-box{
-    
+
+.contact{
+    background:linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+    );
+}
+
+.contact .section-heading h2{
+    color:#fff;
+}
+
+.contact-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.contact-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:20px;
+    padding:38px;
+    color:#fff;
+    backdrop-filter:blur(8px);
     transition:all .35s ease;
 }
-.service-card:hover{
-    transform:translateY(-8px);
-    box-shadow:var(--shadow-lg);
-}
+
 .contact-card:hover{
     transform:translateY(-6px);
-    box-shadow:var(--shadow-lg);
+    border-color:var(--gold);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
 }
-.review-card:hover{
-    transform:translateY(-5px);
+
+.contact-card h3{
+    color:var(--gold-light);
+    font-size:20px;
+    margin-bottom:22px;
 }
-.google-score:hover{
-    transform:translateY(-6px);
+
+.contact-card p{
+    color:rgba(255,255,255,.82);
+    line-height:1.8;
+    margin-bottom:24px;
 }
-.about-box:hover{
-    transform:translateY(-5px);
+
+.contact-card a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#fff;
+    margin-bottom:14px;
+    transition:.35s;
+    word-break:break-word;
+}
+
+.contact-card a:hover{
+    color:var(--gold-light);
+    transform:translateX(4px);
+}
+
+.contact-button{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    margin-top:18px;
+    padding:14px 28px;
+    border-radius:50px;
+    background:var(--gold);
+    color:#fff !important;
+    font-weight:700;
+}
+
+.contact-button:hover{
+    background:var(--gold-hover);
+}
+
+/*==================================================
+  SOSYAL MEDYA
+==================================================*/
+
+.social-link{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:12px 0;
+}
+
+.instagram-icon,
+.facebook-icon{
+    font-size:28px;
+    min-width:28px;
+    color:var(--gold);
+}
+
+.social-link span{
+    line-height:1.4;
 }
 /*==================================================
-  RESPONSIVE
+  FOOTER
 ==================================================*/
+
+footer{
+    background:linear-gradient(135deg,var(--navy),#3B2F27);
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+    border-top:4px solid var(--gold);
+}
+
+footer img{
+    width:95px;
+    margin:0 auto 18px;
+}
+
+footer strong{
+    display:block;
+    color:var(--gold-light);
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:rgba(255,255,255,.85);
+    margin:12px 0;
+    line-height:1.8;
+}
+
+footer small{
+    color:rgba(255,255,255,.60);
+    font-size:13px;
+}
+
+/*==================================================
+  TABLET
+==================================================*/
+
 @media (max-width:991px){
-    .header-container{
-        flex-direction:column;
-        justify-content:center;
-        text-align:center;
-        gap:22px;
-    }
-    .main-nav{
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:20px;
-    }
-    .header-contact{
-        align-items:center;
-    }
-    .hero{
-        padding:100px 6% 70px;
-        background-position:center;
-    }
-    .hero-content{
-        max-width:100%;
-    }
-    .hero-content h1{
-        font-size:clamp(42px,6vw,55px);
-    }
-    .advantages{
-        grid-template-columns:repeat(2,1fr);
-    }
-    .service-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-    .reviews-container{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-    .office-gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
+
+.header-container{
+    flex-direction:column;
+    gap:22px;
+    text-align:center;
 }
+
+.main-nav{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.advantages{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.service-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.office-gallery{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.reviews-container{
+    grid-template-columns:1fr;
+}
+
+}
+
+/*==================================================
+  TELEFON
+==================================================*/
+
 @media (max-width:576px){
-    .section-container{
-        padding:70px 6%;
-    }
-    .hero{
-        min-height:auto;
-        padding:90px 6% 60px;
-    }
-    .hero-content h1{
-        font-size:36px;
-        line-height:1.2;
-    }
-    .hero-content p{
-        font-size:16px;
-    }
-    .hero-buttons{
-        flex-direction:column;
-        align-items:stretch;
-    }
-    .primary-button,
-    .secondary-button{
-        width:100%;
-        justify-content:center;
-    }
-    .advantages{
-        grid-template-columns:1fr;
-    }
-    .service-grid{
-        grid-template-columns:1fr;
-    }
-    .office-gallery{
-        grid-template-columns:1fr;
-    }
-    .office-gallery img{
-        height:220px;
-    }
+
+.section-container{
+    padding:70px 6%;
+}
+
+.hero{
+    min-height:auto;
+    padding:90px 6% 60px;
+}
+
+.hero-content h1{
+    font-size:36px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.advantages{
+    grid-template-columns:1fr;
+}
+
+.service-grid{
+    grid-template-columns:1fr;
+}
+
+.office-gallery{
+    grid-template-columns:1fr;
+}
+
+.office-gallery img{
+    height:220px;
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.language-switcher{
+    justify-content:center;
+}
+
+}
+
+/*==================================================
+  RTL (ARAPÇA)
+==================================================*/
+
+html[dir="rtl"] body{
+    direction:rtl;
+}
+
+html[dir="rtl"] .header-container{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .main-nav{
+    flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .hero-content{
+    text-align:right;
+}
+
+html[dir="rtl"] .section-heading{
+    text-align:center;
+}
+
+html[dir="rtl"] .contact-card{
+    text-align:right;
+}
+
+html[dir="rtl"] .contact-card a{
+    justify-content:flex-start;
+}
+
+html[dir="rtl"] .social-link{
+    justify-content:flex-start;
+}
+
+html[dir="rtl"] .office-gallery{
+    direction:ltr;
 }
 /*==================================================
-  YUKARI ÇIK BUTONU
+  DİL SEÇİCİ
 ==================================================*/
-#topButton{
-    position:fixed;
-    right:28px;
-    bottom:28px;
-    width:58px;
-    height:58px;
-    border:none;
-    border-radius:50%;
-    background:linear-gradient(
-        135deg,
-        var(--gold),
-        var(--gold-light)
-    );
-    color:var(--navy);
-    font-size:24px;
-    font-weight:700;
-    cursor:pointer;
-    box-shadow:0 15px 35px rgba(0,0,0,.22);
-    opacity:0;
-    visibility:hidden;
-    transition:all .35s ease;
-    z-index:9999;
+
+.language-switcher{
+    display:flex;
+    align-items:center;
+    gap:8px;
 }
-#topButton:hover{
-    transform:translateY(-5px);
-    box-shadow:0 22px 45px rgba(0,0,0,.28);
-}
-#topButton.show{
-    opacity:1;
-    visibility:visible;
-}
-/*==================================================
-  YUKARI ÇIK BUTONU
-==================================================*/
-#topButton{
-    position:fixed;
-    right:28px;
-    bottom:28px;
-    width:58px;
-    height:58px;
-    border:none;
-    border-radius:50%;
-    background:linear-gradient(
-        135deg,
-        var(--gold),
-        var(--gold-light)
-    );
-    color:var(--navy);
-    font-size:24px;
-    font-weight:700;
-    cursor:pointer;
+
+.language-switcher a{
+    width:40px;
+    height:40px;
     display:flex;
     align-items:center;
     justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.10);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    transition:all .35s ease;
+}
+
+.language-switcher a:hover{
+    background:var(--gold);
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.language-switcher a.active{
+    background:var(--gold);
+    color:#fff;
+    box-shadow:0 8px 20px rgba(196,154,108,.35);
+}
+
+/*==================================================
+  YUKARI ÇIK BUTONU
+==================================================*/
+
+#topButton{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    width:58px;
+    height:58px;
+    border:none;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+    color:var(--navy);
+    font-size:24px;
+    font-weight:700;
     box-shadow:0 15px 35px rgba(0,0,0,.22);
     opacity:0;
     visibility:hidden;
     transition:all .35s ease;
     z-index:9999;
 }
+
 #topButton.show{
     opacity:1;
     visibility:visible;
 }
+
 #topButton:hover{
     background:linear-gradient(
         135deg,
@@ -941,58 +993,46 @@ footer small{
     transform:translateY(-5px) scale(1.05);
     box-shadow:0 22px 45px rgba(0,0,0,.28);
 }
+
 #topButton:active{
     transform:translateY(-2px);
 }
+
 /*==================================================
-  DİL SEÇİMİ
+  SEÇİM RENGİ
 ==================================================*/
 
-.language-switcher{
-
-    display:flex;
-    align-items:center;
-    gap:8px;
-
-}
-
-.language-switcher a{
-
-    width:40px;
-    height:40px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.10);
-
-    color:#fff;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    transition:all .35s ease;
-
-}
-
-.language-switcher a:hover{
-
+::selection{
     background:var(--gold);
-
     color:#fff;
-
-    transform:translateY(-2px);
-
 }
 
-.language-switcher .active{
-
+::-moz-selection{
     background:var(--gold);
-
+    color:#fff;
 }
+
+/*==================================================
+  SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--cream);
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gold);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--gold-hover);
+}
+
+/*==================================================
+  DOSYA SONU
+==================================================*/
