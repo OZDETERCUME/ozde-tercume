@@ -1044,3 +1044,71 @@ html[dir="rtl"] .office-gallery{
 .main-nav a.active::after{
     width:100%;
 }
+/*=========================================
+  ÇALIŞMA SAATLERİ
+=========================================*/
+
+.working-hours{
+    margin-top:10px;
+}
+
+.hours-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    font-size:15px;
+}
+
+.hours-row:last-child{
+    border-bottom:none;
+}
+
+.hours-row span{
+    color:rgba(255,255,255,.90);
+    font-weight:500;
+}
+
+.hours-row strong{
+    color:var(--gold-light);
+    font-weight:700;
+}
+
+.hours-row.closed strong{
+    color:#ffb3b3;
+}
+
+.holiday-note{
+    margin-top:18px;
+    padding-top:14px;
+    border-top:1px solid rgba(255,255,255,.12);
+    color:rgba(255,255,255,.75);
+    font-size:13px;
+    line-height:1.6;
+    font-style:italic;
+}
+
+/*=========================================
+  ARAPÇA RTL DÜZENİ
+=========================================*/
+
+html[dir="rtl"] .hours-row{
+    direction:rtl;
+    text-align:right;
+}
+
+html[dir="rtl"] .holiday-note{
+    text-align:right;
+}
+
+html[dir="rtl"] .social-link{
+    justify-content:flex-start;
+    flex-direction:row-reverse;
+    text-align:right;
+}
+
+html[dir="rtl"] .contact-card a:hover{
+    padding-left:0;
+    padding-right:6px;
+}
