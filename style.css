@@ -1033,6 +1033,14 @@ html[dir="rtl"] .office-gallery{
     background:var(--gold-hover);
 }
 
-/*==================================================
-  DOSYA SONU
-==================================================*/
+/*=========================================
+  AKTİF MENÜ
+=========================================*/
+
+.main-nav a.active{
+    color:var(--gold-light);
+}
+
+.main-nav a.active::after{
+    width:100%;
+}
