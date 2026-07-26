@@ -297,8 +297,8 @@ background:linear-gradient(
 }
 
 .hero .primary-button:hover{
-    transform:translateY(-4px);
-    box-shadow:0 25px 45px rgba(196,154,108,.40);
+    transform:translateY(-2px);
+    box-shadow:0 18px 35px rgba(196,154,108,.30);
     background:linear-gradient(
         135deg,
         #B88756,
