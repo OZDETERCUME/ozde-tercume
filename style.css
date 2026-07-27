@@ -1179,3 +1179,10 @@ html[dir="rtl"] .whatsapp-float{
     }
 
 }
+.linkedin-link i {
+    font-size: 42px;
+    width: 48px;
+    text-align: center;
+    color: var(--gold);
+    flex-shrink: 0;
+}
