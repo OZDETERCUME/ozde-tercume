@@ -893,7 +893,7 @@ html[dir="rtl"] .main-nav{
 }
 
 html[dir="rtl"] .hero-content{
-    text-align:right;
+    text-align:center;
 }
 
 html[dir="rtl"] .section-heading{
