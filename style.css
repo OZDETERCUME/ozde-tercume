@@ -1207,15 +1207,72 @@ html[lang="ar"] .hero-content p {
 html[lang="ar"] .hero .primary-button {
     display: inline-flex;
 }
-<div class="office-gallery">
-    <img src="ofis1.webp" alt="Ofisimiz 1" width="400" height="300">
-    <img src="ofis2.webp" alt="Ofisimiz 2" width="400" height="300">
-    <img src="ofis3.webp" alt="Ofisimiz 3" width="400" height="300">
-    <img src="ofis4.webp" alt="Ofisimiz 4" width="400" height="300">
-</div>
+/* OFİS FOTOĞRAF LIGHTBOX */
 
-<!-- Ofis Fotoğraf Lightbox -->
-<div id="officeLightbox" class="office-lightbox">
-    <button class="office-lightbox-close" type="button" aria-label="Kapat">&times;</button>
-    <img id="officeLightboxImage" src="" alt="">
-</div>
+.office-lightbox {
+    display: none !important;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(5px);
+}
+
+.office-lightbox.active {
+    display: flex !important;
+}
+
+.office-lightbox img {
+    width: auto;
+    height: auto;
+    max-width: 92vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: officePhotoOpen 0.3s ease;
+}
+
+.office-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 46px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@keyframes officePhotoOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .office-lightbox {
+        padding: 15px;
+    }
+
+    .office-lightbox img {
+        max-width: 95vw;
+        max-height: 82vh;
+    }
+
+    .office-lightbox-close {
+        top: 15px;
+        right: 18px;
+        font-size: 40px;
+    }
+}
