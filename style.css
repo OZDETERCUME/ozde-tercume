@@ -742,7 +742,8 @@ background:linear-gradient(
 }
 
 .instagram-icon,
-.facebook-icon{
+.facebook-icon,
+.linkedin-icon{
     font-size:28px;
     min-width:28px;
     color:var(--gold);
@@ -1177,8 +1178,3 @@ html[dir="rtl"] .whatsapp-float{
     .contact-card iframe{
         height:220px;
     }
-.linkedin-icon {
-    font-size: 28px;
-    min-width: 28px;
-    color: var(--gold) !important;
-}
