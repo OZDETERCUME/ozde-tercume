@@ -1177,11 +1177,3 @@ html[dir="rtl"] .whatsapp-float{
     .contact-card iframe{
         height:220px;
     }
-
-.linkedin-link i {
-    font-size: 26px;
-    width: 48px;
-    text-align: center;
-    color: var(--gold);
-    flex-shrink: 0;
-}
