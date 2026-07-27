@@ -1178,9 +1178,8 @@ html[dir="rtl"] .whatsapp-float{
         height:220px;
     }
 
-}
-linkedin-link i {
-    font-size: 28px;
+.linkedin-link i {
+    font-size: 26px;
     width: 48px;
     text-align: center;
     color: var(--gold);
