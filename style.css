@@ -1178,3 +1178,8 @@ html[dir="rtl"] .whatsapp-float{
     .contact-card iframe{
         height:220px;
     }
+html[lang="ar"] .hero-content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
