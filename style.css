@@ -894,6 +894,8 @@ html[dir="rtl"] .main-nav{
 
 html[dir="rtl"] .hero-content{
     text-align:center;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 html[dir="rtl"] .section-heading{
