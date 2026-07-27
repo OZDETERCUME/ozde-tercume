@@ -1180,5 +1180,5 @@ html[dir="rtl"] .whatsapp-float{
 .linkedin-link i {
     font-size: 28px;
     min-width: 28px;
-    color: var(--gold);
+    color: var(--gold) !important;
 }
