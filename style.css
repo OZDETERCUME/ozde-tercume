@@ -1336,10 +1336,9 @@ html[lang="ar"] .hero .primary-button {
     }
 
     100%{
-        transform:translateX(-35%);
+        transform:translateX(calc(-50% - 9px));
     }
 }
-
 
 /* MOBİL */
 
