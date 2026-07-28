@@ -1329,17 +1329,3 @@ html[lang="ar"] .hero .primary-button {
     color:var(--navy);
     line-height:1.4;
 }
-
-@keyframes serviceSlider{
-    0%{
-        transform:translateX(0);
-    }
-
-    100%{
-        transform:translateX(calc(-50% - 9px));
-    }
-}
-
-/* MOBİL */
-
-@
