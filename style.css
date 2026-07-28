@@ -1286,17 +1286,3 @@ html[lang="ar"] .hero .primary-button {
         font-size: 40px;
     }
 }
-/* 5 HİZMET GÖRSELİ - BÜYÜME EFEKTİ */
-
-#hizmetler + div img {
-    transition: transform .35s ease, box-shadow .35s ease;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-}
-
-#hizmetler + div img:hover {
-    transform: scale(1.25);
-    box-shadow: 0 12px 30px rgba(0,0,0,.25);
-    z-index: 20;
-}
