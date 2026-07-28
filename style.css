@@ -1277,55 +1277,52 @@ html[lang="ar"] .hero .primary-button {
     }
 }
 /* ========================================
-   HİZMET GÖRSEL SLIDER
+   HİZMET GÖRSEL ŞERİDİ
 ======================================== */
 
-.service-slider{
+.service-showcase{
     width:100%;
+    max-width:1400px;
+    margin:25px auto 35px;
+    padding:0 20px;
+    box-sizing:border-box;
     overflow:hidden;
-    margin-top:35px;
-    padding:10px 0 20px;
 }
 
-.service-slider-track{
+.service-showcase-track{
     display:flex;
-    gap:18px;
-    width:max-content;
-    animation:serviceSlider 28s linear infinite;
+    justify-content:center;
+    gap:16px;
 }
 
-.service-slider:hover .service-slider-track{
-    animation-play-state:paused;
-}
-
-.service-slide{
-    width:250px;
-    flex:0 0 250px;
+.service-showcase-card{
+    width:220px;
+    flex:0 0 220px;
     background:#fff;
-    border-radius:14px;
+    border-radius:12px;
     overflow:hidden;
-    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
     transition:transform .3s ease, box-shadow .3s ease;
 }
 
-.service-slide:hover{
+.service-showcase-card:hover{
     transform:scale(1.04);
-    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    box-shadow:0 8px 22px rgba(0,0,0,.18);
 }
 
-.service-slide img{
+.service-showcase-card img{
     width:100%;
-    height:140px;
+    height:125px;
     object-fit:cover;
     display:block;
 }
 
-.service-slide h4{
+.service-showcase-card h3{
     margin:0;
-    padding:12px 8px;
+    padding:10px 6px;
     text-align:center;
-    font-size:14px;
+    font-size:13px;
+    line-height:1.35;
     font-weight:700;
     color:var(--navy);
-    line-height:1.4;
 }
