@@ -418,8 +418,8 @@ background:linear-gradient(
 
 .service-grid{
     display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:24px;
+    grid-template-columns:repeat(7,1fr);
+    gap:16px;
     align-items:stretch;
 }
 
