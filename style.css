@@ -165,28 +165,44 @@ section{
 }
 
 .language-switcher a{
-    width:40px;
-    height:40px;
+    width:46px;
+    height:46px;
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
+    gap:2px;
     border-radius:50%;
     background:rgba(255,255,255,.10);
     color:#fff;
-    font-size:13px;
-    font-weight:700;
+    text-decoration:none;
     transition:all .35s ease;
+    overflow:hidden;
+}
+
+.language-switcher a img{
+    width:22px;
+    height:14px;
+    object-fit:cover;
+    display:block;
+    border-radius:2px;
+}
+
+.language-switcher a span{
+    display:block;
+    font-size:9px;
+    font-weight:700;
+    line-height:10px;
+    color:#fff;
 }
 
 .language-switcher a:hover{
     background:var(--gold);
-    color:#fff;
     transform:translateY(-2px);
 }
 
 .language-switcher a.active{
     background:var(--gold);
-    color:#fff;
     box-shadow:0 5px 15px rgba(196,154,108,.35);
 }
 
