@@ -1314,9 +1314,11 @@ html[lang="ar"] .hero .primary-button {
 }
 
 .video-wrapper video {
-    width: 100%;
+    width: 600px;
+    max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
 }
