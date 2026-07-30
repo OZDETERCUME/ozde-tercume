@@ -1302,23 +1302,3 @@ html[lang="ar"] .hero .primary-button {
         font-size: 40px;
     }
 }
-/* Tanıtım Videosu */
-.video-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.video-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.video-wrapper video {
-    width: 600px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.2);
-}
