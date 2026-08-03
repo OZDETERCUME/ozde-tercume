@@ -1347,8 +1347,9 @@ html[lang="ar"] .hero .primary-button {
         display:flex;
     }
 
-    .language-switcher{
-        display:none;
-    }
+.language-switcher{
+    display:flex;
+    gap:6px;
+}
 
 }
