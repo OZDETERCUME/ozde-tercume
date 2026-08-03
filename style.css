@@ -1301,11 +1301,3 @@ html[lang="ar"] .hero .primary-button {
         right: 18px;
         font-size: 40px;
     }
-}
-@media (max-width:768px){
-
-.hero{
-    background:red !important;
-}
-
-}
