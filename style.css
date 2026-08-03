@@ -1305,7 +1305,7 @@ html[lang="ar"] .hero .primary-button {
 @media (max-width:768px){
 
     .hero{
-        padding-top:40px;
+        padding-top:20px;
         padding-bottom:40px;
         min-height:60vh;
     }
