@@ -1302,3 +1302,29 @@ html[lang="ar"] .hero .primary-button {
         font-size: 40px;
     }
 }
+/* ===== SADECE MOBİL İÇİN HERO DÜZENİ ===== */
+@media (max-width:768px){
+
+    .hero{
+        min-height:65vh;
+        padding:70px 6% 50px;
+        background-position:center;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:28px;
+    }
+
+    .hero .primary-button{
+        padding:14px 28px;
+        font-size:14px;
+    }
+
+}
