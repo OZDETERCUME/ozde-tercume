@@ -1301,3 +1301,9 @@ html[lang="ar"] .hero .primary-button {
         right: 18px;
         font-size: 40px;
     }
+@media (max-width:576px){
+
+.hero{
+    min-height:auto;
+    padding:35px 6% 45px;
+}
